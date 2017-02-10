@@ -10,6 +10,7 @@
 /.htaccess.orig
 /.idea
 /app/config_sandbox
+/app/etc/local.xml
 /downloader/cache.cfg
 /downloader/connect.cfg
 /var/*

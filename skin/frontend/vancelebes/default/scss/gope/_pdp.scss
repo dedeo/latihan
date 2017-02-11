@@ -1,0 +1,122 @@
+/*----------------------------------------------------------------------------*/
+/* General
+/*----------------------------------------------------------------------------*/
+.catalog-product-view {
+	.product-collateral {
+		display: none;
+	}
+
+	.product-img-box {
+		.product-image {
+			border: 1px solid #000;
+		}
+
+		.more-views {
+			h2 {
+				display: none;	
+			}
+		}
+	}
+
+	.product-view .product-shop {
+		.product-name {
+			display: inline-block;
+			width: 50%;
+			float: left;
+
+			.h1 {
+				color: #000;
+			}
+		}
+
+		.price-info {
+			width: 50%;
+			float: left;
+			display: inline-block;
+			padding: 0px 20px;
+		    max-width: none;
+    		text-align: right;
+		}
+
+		.extra-info {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.price-box {
+			margin-bottom: 0px;
+		}
+
+		.price-box .regular-price .price, .price-box .special-price .price,.price-box .full-product-price .price {
+			color: #dc012f;
+			font-weight: bold;
+		}
+
+		.short-description {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.product-view .product-options .swatch-attr label {
+	    font-size: 15px;
+    	margin-bottom: 5px;
+	}
+
+	.product-options {
+	    border: 1px solid #000;
+	    border-bottom: 0px;
+	}
+
+	.sharing-wrapper {
+	    display: inline-block;
+	    width: 100%;
+	    border: 1px solid #000;
+	    padding: 10px;
+	    background: #f5f5f5;
+
+		label {
+			display: inline-block;
+			width: 100%;
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.product-view {
+		.add-to-cart, .add-to-links {
+			display: none;
+		}
+
+		.sharing-links {
+			li {
+				padding-bottom: 0px;
+			}
+
+			li:first-child {
+				padding-left: 0px;
+			}
+		}
+	}
+
+	.product-options-bottom {
+	    background: transparent;
+	    border: 0px;
+	    padding: 0px;
+
+		.add-to-cart, .add-to-links, .price-box {
+			display: none;
+		}
+	}
+}
+/*----------------------------------------------------------------------------*/
+/* Product Image
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Product Info
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Collateral Tabs
+/*----------------------------------------------------------------------------*/

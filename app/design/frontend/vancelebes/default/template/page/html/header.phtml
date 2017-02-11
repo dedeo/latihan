@@ -1,0 +1,43 @@
+<header id="header" class="page-header">
+    <div class="page-header-container">
+
+        <!-- Search -->
+        <div id="header-search" class="skip-content">
+            <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+
+        <a class="logo" href="<?php echo $this->getUrl('') ?>">
+            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+            <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
+        </a>
+
+        <div class="account-cart-wrapper">
+            <!-- Top Header -->
+            <div class="header-top">
+                <ul class="header-links">
+                    <li>
+                        <?php if (! Mage::getSingleton('customer/session')->isLoggedIn()): ?>
+                            <a href="<?php echo Mage::getUrl('customer/account/login'); ?>"><?php echo $this->__('Login') ?></a>/<a href="<?php echo Mage::getUrl('customer/account/create'); ?>"><?php echo $this->__('Register') ?></a>
+                        <?php else: ?>
+                            <a href="<?php echo Mage::getUrl('customer/account'); ?>"><i class="fa fa-user" aria-hidden="true"></i><?php echo $this->__('Akun Saya') ?></a> / <a href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><<?php echo $this->__('Logout') ?></a>
+                        <?php endif; ?>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cart -->
+
+            <div class="header-minicart">
+                <?php echo $this->getChildHtml('minicart_head'); ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="header-nav" class="skip-content">
+        <?php echo $this->getChildHtml('topMenu') ?>
+    </div>
+</header>
+
+
+<?php echo $this->getChildHtml('topContainer'); ?>

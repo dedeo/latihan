@@ -1,0 +1,538 @@
+/*
+Documentation:
+    http://www.magentocommerce.com/knowledge-base/entry/ee114-ce19-rwd-dev-guide
+    http://sass-lang.com/documentation/file.SASS_REFERENCE.html
+    http://compass-style.org/
+*/
+
+@import 'gope/reset-magento';
+@import 'gope/responsive';
+@import 'gope/helper';
+@import 'gope/retina-sprites';
+@import 'gope/retina-background-image';
+@import 'gope/table';
+@import 'gope/button';
+@import 'gope/banner-enhanced';
+@import 'gope/carousel';
+@import 'gope/typography';
+@import 'gope/product-listing';
+@import 'gope/global';
+@import 'gope/homepage';
+@import 'gope/cms';
+@import 'gope/catalog';
+@import 'gope/pdp';
+@import 'gope/review';
+@import 'gope/cart';
+@import 'gope/checkout';
+@import 'gope/customer';
+
+/*----------------------------------------------------------------------------*/
+/* All Pages
+/*----------------------------------------------------------------------------*/
+body {
+    font-family: lato;
+    color: #000;
+}
+
+a {
+    color: #000;
+    &:hover {
+        text-decoration: none;
+        color: #636363;
+        opacity: 0.8;
+    }
+}
+
+.header-language-background {
+    display: none;
+}
+
+.page-header-container {
+    font-family: lato;
+    padding-top: 15px;
+    display: inline-block;
+    width: 100%;
+
+   .logo {
+        min-width: auto;
+        width: 33.33%;
+        height: auto;
+        min-height: auto;
+        max-width: none;
+        display: inline-block;
+        margin: 0 auto;
+        float: left; 
+        padding: 0px;
+
+        img {
+            max-width: 90px;
+            margin: 0 auto;
+            float: none;
+        }   
+    }
+}
+
+.page-header {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#header-nav {
+    width: 100%;
+    display: inline-block;
+    padding: 0px;
+    border: 0px;
+    background: #f8f8f8;
+    margin-top: 15px;
+
+    #nav {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding: 5px 0px; 
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .nav-primary {
+        margin: 0px;
+
+        a {
+            color: #000;
+            font-weight: bold;
+        }
+
+        li.level1 a {
+            color: #000;
+        }
+
+        a.level0 {
+            padding: 0px 15px;
+        }
+
+        li.view-all {
+            display: none;
+        }
+
+        li.level0 ul {
+            border-radius: 5px;
+            border-color: #ccc;
+            box-shadow: 1px 1px 1px rgba(0,0,0,.175);
+            padding: 0px;
+        }
+
+        li.level1 a {
+            border-radius: 0px;
+            padding: 3px 20px;
+
+            &:hover {
+                background: #f4f4f4;
+            }
+        }
+
+    }
+
+    &.hasScrolled {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        z-index: 99;
+        background: #f8f8f8;
+        padding: 0px 30px;
+        border-bottom: 0px;
+        margin-top: 0px;
+    }
+}
+
+#header-search {
+    width: 33.33%;
+    display: inline-block;
+    position: static;
+    max-width: none;
+    min-width: 300px;
+    float: left;
+    height: auto;
+    border: 1px solid #000;
+    margin-top: 65px;
+
+    #cat {
+        width: 30%;
+        height: 40px;
+        border-radius: 0px;
+        float: left;
+        background: transparent;
+        border: none;
+        float: left;
+    }
+
+    #search {
+        border: none;
+        width: 70%;
+        float: left;
+        border-left: 1px solid #000;
+        border-radius: 0px;
+        padding-left: 10px;
+    }
+
+    #search_mini_form {
+        max-width: 100%;
+
+        .search-button{
+            position: absolute;
+            text-indent: initial;
+            z-index: 1;
+            color: #000;
+            font-size: 18px;
+            top: -2px;
+            right: 5px;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+.account-cart-wrapper {
+    padding: 0px;
+    position: static;
+    width: 33.33%;
+    float: left;
+    display: inline-block;
+    margin-top: 20px;
+
+    .header-top {
+        font-size: 15px;
+    }
+
+    .header-links {
+        text-align: right;
+    }
+
+    .fa {
+        margin-right: 5px;
+        font-size: 18px;
+    }
+
+    .header-minicart {
+        position: relative;
+        float: right;
+
+        #shopping-menu {
+            font-size: 16px;
+            width: 250px;
+            border: 1px solid #000;
+            padding: 7px 10px;
+            margin-top: 25px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+
+        .block-cart {
+            position: absolute;
+            z-index: 3;
+            background: #fff;
+            border: 1px solid #000;
+            margin-top: -1px;
+            width: 400px;
+            right: 0px;
+        }
+        
+        .shopping-arrow, .shopping-arrow-down {
+            position: absolute;
+            right: 8px;
+            top: 7px;
+        }
+
+        .shopping-arrow-down {
+            display: none;
+            z-index: 1;
+        }
+
+        .minicart-wrapper {
+            padding: 0px;
+
+            .mini-products-list {
+                padding: 0px;
+
+                li {
+                    padding: 20px 15px;
+                }
+
+                .product-details .product-name a {
+                    color: #000;
+                    font-size: 13px;
+                }
+
+                .info-wrapper {
+                    th {
+                        text-transform: capitalize;
+                        font-size: 13px;
+                        color: #000;
+                    }
+
+                    .price {
+                        color: #dc012f;
+                    }
+                }
+            }
+
+            .subtotal {
+                background-color: #000;
+                text-align: center;
+                line-height: 2em;
+                padding: 10px 0px;
+                margin-bottom: 0px;
+                font-size: 16px;
+
+                .label {
+                    margin-right: 5px;
+                    text-transform: capitalize;
+                }
+
+                .price {
+                    color: #fff;
+                    margin-left: 5px;
+                    font-weight: bold;
+                }
+            }
+
+            .minicart-actions {
+                padding: 0px;
+
+                .checkout-types.minicart {
+                    width: 50%;
+                    display: inline-block;
+                    float: left;
+
+                    li {
+                        width: 100%;
+                        margin: 0px;
+                    }
+                }
+
+                .checkout-button {
+                    min-width: auto;
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #dc012f;
+                    line-height: normal;
+                }
+
+                .cart-link {
+                    width: 50%;
+                    border: 1px solid #000;
+                    display: inline-block;
+                    margin: 0px;
+                    padding: 10px;
+                    height: auto;
+                    line-height: normal;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+body .main-container {
+    padding: 30px;
+    max-width: 1200px;
+    display: block;
+    margin-bottom: 50px;
+}
+
+
+.footer-container {
+    width: 100%;
+    padding: 0px;
+    background: #282b2a;
+    margin: 0px;
+    max-width: none;
+
+    .footer {
+        padding-top: 0px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        address {
+            font-size: 12px;
+            color: #000;
+            padding: 15px;
+            border-top: 1px solid #000;
+            margin-top: 0px;
+        }
+    }
+
+    .footer-contents {
+        display: inline-block;
+        width: 100%;
+        max-width: 1200px;
+        padding: 30px;
+        text-align: left;
+
+        .footer-content {
+            width: 20%;
+            float: left;
+            display: inline-block;
+            text-align: left;
+
+            &:first-child {
+                width: 35%;
+                margin-right: 5%;
+                padding-right: 20px;
+            }
+
+            li {
+                width: 100%;
+                display: inline-block;
+                margin-bottom: 5px;
+                color: #fff;
+            }
+
+            li a {
+                color: #fff;
+            }
+
+            li.top {
+                font-weight: bold;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+
+            &.media-sosial span {
+                font-size: 15px;
+            }
+
+            &.media-sosial span .fa {
+                margin-right: 5px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    address {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        color: #000;
+        background: #fff;
+        padding: 10px;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure Page
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 1column
+/*----------------------------------------------------------------------------*/
+
+.col1-layout {
+
+    .col-main {
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 2columns-left
+/*----------------------------------------------------------------------------*/
+
+.col2-left-layout {
+
+    .col-left {
+    }
+
+    .col-main {
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 2columns-right
+/*----------------------------------------------------------------------------*/
+
+.col2-right-layout {
+
+    .col-main {
+     }
+
+    .col-right {
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 3columns
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Home
+/*----------------------------------------------------------------------------*/
+
+body.cms-home {
+}
+
+/*----------------------------------------------------------------------------*/
+/* Header
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Home: Banner
+/*----------------------------------------------------------------------------*/
+
+.banner-container {
+}
+
+/*----------------------------------------------------------------------------*/
+/* Breadcrumbs
+/*----------------------------------------------------------------------------*/
+
+.breadcrumbs {
+}
+
+/*----------------------------------------------------------------------------*/
+/* Price Box
+/*----------------------------------------------------------------------------*/
+
+.price-box {
+}
+
+/*----------------------------------------------------------------------------*/
+/* Category/Search Page
+/*----------------------------------------------------------------------------*/
+
+.catalog-category-view,
+.catalogsearch-result-index {
+}
+
+/*----------------------------------------------------------------------------*/
+/* Toolbar
+/*----------------------------------------------------------------------------*/
+
+.toolbar{
+    
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Upsell (Also Bought)
+/*----------------------------------------------------------------------------*/
+
+.product-view .box-up-sell {
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Related
+/*----------------------------------------------------------------------------*/
+
+.product-view .block-related {
+}
+
+/*----------------------------------------------------------------------------*/
+/* footer
+/*----------------------------------------------------------------------------*/
+
+.footer {
+}

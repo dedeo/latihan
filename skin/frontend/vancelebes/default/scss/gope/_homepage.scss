@@ -1,0 +1,72 @@
+.home-product {
+	margin-top: 40px;
+    position: relative;
+    border-top: 1px solid #000;
+    padding-top: 40px;
+
+    .products-grid {
+		.actions {
+			position: static;
+		}
+
+		.product-info {
+			padding-bottom: 10px;	
+		}
+	}
+	
+	&.baju-kaos {
+		.page-title h2 {
+			background: #dc012f;
+		}
+	}
+
+	.page-title {
+		position: relative;
+
+		h2 {
+		    padding: 10px 20px;
+		    border: 0px;
+		    color: #fff;
+		    font-size: 17px;
+
+		    a {
+		    	color: #fff;
+		    }
+		}
+	}
+
+	.product-slide-nav {
+		.next, .prev {
+			position: absolute;
+			top: 50%;
+			z-index: 10;
+		    margin-top: -55px;
+		}
+
+		.next {
+			right: 0px;
+			&:after {
+				content:'';
+				@include use-sprite(icon-next);
+			}
+		}
+
+		.prev {
+			left: 0px;
+			&:after {
+				content:'';
+				@include use-sprite(icon-prev);
+			}
+		}
+	}
+
+	.products-grid {
+		.item {
+			padding: 0px 10px;
+		}
+
+		.product-image {
+			border: 0px;
+		}
+	}
+}

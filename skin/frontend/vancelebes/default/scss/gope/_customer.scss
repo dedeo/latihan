@@ -3,19 +3,64 @@
 /*----------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------*/
-/* Login Page
+/* Login Page, and register, forgotpass
 /*----------------------------------------------------------------------------*/
 
-body.customer-account-login .main {
+body.customer-account-login, body.customer-account-create, body.customer-account-forgotpassword {
 
-}
+	input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text] {
+		width: 100%;
+	}
 
-/*----------------------------------------------------------------------------*/
-/* Registration Page
-/*----------------------------------------------------------------------------*/
+	.account-create, .account-login, .forgotpass-wrapper {
+		width: 600px;
+		max-width: 100%;
+		margin: 0 auto;
 
-.account-create {
+		.fieldset {
+			margin: 0px;
+			max-width: none;
+		}
 
+		.page-title h1 {
+			text-align: center;
+		}
+	}
+
+	.form-list .control input.checkbox {
+		margin-top: 0px;
+	}
+
+	form .legend {
+		margin: 20px 0px;
+    	font-weight: bold;
+	}
+
+	.fieldset.login-info {
+		margin-top: 40px;
+	}
+
+	.buttons-set {
+	  display: inline-block;
+	  width: 100%;
+	  margin: 30px 0px 0px;
+	  max-width: none;
+
+	  button.button {
+	    float: left;
+	    margin-left: 0px;
+	    width: 100%;
+	    padding: 15px 0px;
+	    margin-top: 10px;
+	    font-size: 20px;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	  }
+	}
+
+	.newsletter-control .control label {
+		font-weight: bold;
+	}
 }
 
 /*----------------------------------------------------------------------------*/

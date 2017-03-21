@@ -21,7 +21,7 @@
 	.product-view .product-shop {
 		.product-name {
 			display: inline-block;
-			width: 50%;
+			width: 100%;
 			float: left;
 
 			.h1 {
@@ -85,7 +85,7 @@
 
 	.product-view {
 		.add-to-cart, .add-to-links {
-			display: none;
+			
 		}
 
 		.sharing-links {
@@ -103,10 +103,6 @@
 	    background: transparent;
 	    border: 0px;
 	    padding: 0px;
-
-		.add-to-cart, .add-to-links, .price-box {
-			display: none;
-		}
 	}
 }
 /*----------------------------------------------------------------------------*/

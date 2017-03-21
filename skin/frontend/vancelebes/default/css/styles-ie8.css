@@ -9855,6 +9855,22 @@ button:hover, .button:hover {
 /*----------------------------------------------------------------------------*/
 /* Forms, Input, Validation.
 /*----------------------------------------------------------------------------*/
+/* line 120, ../scss/gope/_global.scss */
+.main input {
+  height: 40px;
+}
+/* line 128, ../scss/gope/_global.scss */
+.main select {
+  height: 40px;
+}
+/* line 132, ../scss/gope/_global.scss */
+.main textarea {
+  max-width: none;
+}
+/* line 136, ../scss/gope/_global.scss */
+.main label {
+  font-size: 15px;
+}
 /* line 144, ../scss/gope/_global.scss */
 .main ::-webkit-input-placeholder {
   color: #737373;
@@ -9877,14 +9893,44 @@ button:hover, .button:hover {
 /*----------------------------------------------------------------------------*/
 /* Global Styles
 /*----------------------------------------------------------------------------*/
+/* line 164, ../scss/gope/_global.scss */
+.page-title h1 {
+  border-bottom: 1px solid #000;
+}
+
+/* line 168, ../scss/gope/_global.scss */
+.form-list .field, .form-list .wide, .form-list .control {
+  margin-bottom: 20px;
+}
+
 /* remove default dotted border while focusing to a link */
-/* line 166, ../scss/gope/_global.scss */
+/* line 173, ../scss/gope/_global.scss */
 a:active,
 a:focus,
 *:focus {
   outline: none;
   color: inherit;
   noFocusLine: expression(this.onFocus=this.blur());
+}
+
+/* line 182, ../scss/gope/_global.scss */
+.buttons-set {
+  display: inline-block;
+  width: 100%;
+  margin: 30px 0px 0px;
+  max-width: none;
+  border-top: 1px solid #000;
+}
+/* line 189, ../scss/gope/_global.scss */
+.buttons-set button.button {
+  float: left;
+  margin-left: 0px;
+  width: 100%;
+  padding: 15px 0px;
+  margin-top: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* line 1, ../scss/gope/_homepage.scss */
@@ -10125,7 +10171,7 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
 /* line 22, ../scss/gope/_pdp.scss */
 .catalog-product-view .product-view .product-shop .product-name {
   display: inline-block;
-  width: 50%;
+  width: 100%;
   float: left;
 }
 /* line 27, ../scss/gope/_pdp.scss */
@@ -10185,10 +10231,6 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
   font-size: 15px;
   margin-bottom: 10px;
 }
-/* line 87, ../scss/gope/_pdp.scss */
-.catalog-product-view .product-view .add-to-cart, .catalog-product-view .product-view .add-to-links {
-  display: none;
-}
 /* line 92, ../scss/gope/_pdp.scss */
 .catalog-product-view .product-view .sharing-links li {
   padding-bottom: 0px;
@@ -10202,10 +10244,6 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
   background: transparent;
   border: 0px;
   padding: 0px;
-}
-/* line 107, ../scss/gope/_pdp.scss */
-.catalog-product-view .product-options-bottom .add-to-cart, .catalog-product-view .product-options-bottom .add-to-links, .catalog-product-view .product-options-bottom .price-box {
-  display: none;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -10295,11 +10333,63 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
 /* General
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
-/* Login Page
+/* Login Page, and register, forgotpass
 /*----------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------*/
-/* Registration Page
-/*----------------------------------------------------------------------------*/
+/* line 11, ../scss/gope/_customer.scss */
+body.customer-account-login input[type=email], body.customer-account-login input[type=search], body.customer-account-login input[type=number], body.customer-account-login input[type=password], body.customer-account-login input[type=tel], body.customer-account-login input[type=text], body.customer-account-create input[type=email], body.customer-account-create input[type=search], body.customer-account-create input[type=number], body.customer-account-create input[type=password], body.customer-account-create input[type=tel], body.customer-account-create input[type=text], body.customer-account-forgotpassword input[type=email], body.customer-account-forgotpassword input[type=search], body.customer-account-forgotpassword input[type=number], body.customer-account-forgotpassword input[type=password], body.customer-account-forgotpassword input[type=tel], body.customer-account-forgotpassword input[type=text] {
+  width: 100%;
+}
+/* line 15, ../scss/gope/_customer.scss */
+body.customer-account-login .account-create, body.customer-account-login .account-login, body.customer-account-login .forgotpass-wrapper, body.customer-account-create .account-create, body.customer-account-create .account-login, body.customer-account-create .forgotpass-wrapper, body.customer-account-forgotpassword .account-create, body.customer-account-forgotpassword .account-login, body.customer-account-forgotpassword .forgotpass-wrapper {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+/* line 20, ../scss/gope/_customer.scss */
+body.customer-account-login .account-create .fieldset, body.customer-account-login .account-login .fieldset, body.customer-account-login .forgotpass-wrapper .fieldset, body.customer-account-create .account-create .fieldset, body.customer-account-create .account-login .fieldset, body.customer-account-create .forgotpass-wrapper .fieldset, body.customer-account-forgotpassword .account-create .fieldset, body.customer-account-forgotpassword .account-login .fieldset, body.customer-account-forgotpassword .forgotpass-wrapper .fieldset {
+  margin: 0px;
+  max-width: none;
+}
+/* line 25, ../scss/gope/_customer.scss */
+body.customer-account-login .account-create .page-title h1, body.customer-account-login .account-login .page-title h1, body.customer-account-login .forgotpass-wrapper .page-title h1, body.customer-account-create .account-create .page-title h1, body.customer-account-create .account-login .page-title h1, body.customer-account-create .forgotpass-wrapper .page-title h1, body.customer-account-forgotpassword .account-create .page-title h1, body.customer-account-forgotpassword .account-login .page-title h1, body.customer-account-forgotpassword .forgotpass-wrapper .page-title h1 {
+  text-align: center;
+}
+/* line 30, ../scss/gope/_customer.scss */
+body.customer-account-login .form-list .control input.checkbox, body.customer-account-create .form-list .control input.checkbox, body.customer-account-forgotpassword .form-list .control input.checkbox {
+  margin-top: 0px;
+}
+/* line 34, ../scss/gope/_customer.scss */
+body.customer-account-login form .legend, body.customer-account-create form .legend, body.customer-account-forgotpassword form .legend {
+  margin: 20px 0px;
+  font-weight: bold;
+}
+/* line 39, ../scss/gope/_customer.scss */
+body.customer-account-login .fieldset.login-info, body.customer-account-create .fieldset.login-info, body.customer-account-forgotpassword .fieldset.login-info {
+  margin-top: 40px;
+}
+/* line 43, ../scss/gope/_customer.scss */
+body.customer-account-login .buttons-set, body.customer-account-create .buttons-set, body.customer-account-forgotpassword .buttons-set {
+  display: inline-block;
+  width: 100%;
+  margin: 30px 0px 0px;
+  max-width: none;
+}
+/* line 49, ../scss/gope/_customer.scss */
+body.customer-account-login .buttons-set button.button, body.customer-account-create .buttons-set button.button, body.customer-account-forgotpassword .buttons-set button.button {
+  float: left;
+  margin-left: 0px;
+  width: 100%;
+  padding: 15px 0px;
+  margin-top: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 61, ../scss/gope/_customer.scss */
+body.customer-account-login .newsletter-control .control label, body.customer-account-create .newsletter-control .control label, body.customer-account-forgotpassword .newsletter-control .control label {
+  font-weight: bold;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Forgot Password
 /*----------------------------------------------------------------------------*/

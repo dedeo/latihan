@@ -1,0 +1,52 @@
+<!--@subject Welcome, {{var customer.name}}! @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"htmlescape var=$customer.name":"Customer Name",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var customer.email":"Customer Email",
+"htmlescape var=$customer.password":"Customer Password"}
+@-->
+
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+        <tr>
+            <td align="center" valign="top" style="padding:20px 0 20px 0">
+                <!-- [ header starts here] -->
+                <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650" style="border:1px solid #E0E0E0;">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=""}}"><img src="{{store url="media/wysiwyg/logo"}}logo-email.gif" alt="{{var logo_alt}}" style="margin-bottom:10px;" border="0"/></a></td>
+                    </tr>
+                <!-- [ middle starts here] -->
+                    <tr>
+                        <td valign="top">
+                            <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;"">Yth. {{htmlescape var=$customer.name}},</h1>
+                            <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">Selamat datang di <strong>Vancelebes.com</strong> terima kasih Anda telah mendaftar di situs kami.</p>
+							<p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">Selanjutnya, ketika Anda hendak berbelanja di situs kami, silahkan klik <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">Masuk</a> atau <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">Akun Saya</a> yang terdapat di bagian atas dari setiap halaman, dan masukkanlah alamat emai serta kata sandi Anda.</p>
+                            <p style="font-size:12px; line-height:16px; margin:0 0 8px 0;">Ketika masuk ke akun Anda, Anda dapat melakukan hal-hal berikut:</p>
+                            <ul style="font-size:12px; line-height:16px; margin:0 0 16px 0; padding:0;">
+                                <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Melakukan checkout lebih cepat ketika berbelanja</li>
+                                <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Mengecek status order</li>
+                                <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Melihat order sebelumnya</li>
+                                <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Membuat perubahan terhadap informasi akun Anda</li>
+                                <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Mengubah kata sandi Anda</li>
+                                <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Menyimpan beberapa alamat pilihan (untuk pengiriman ke beberapa anggota keluarga dan teman!)</li>
+                            </ul>
+                            <p style="font-size:12px; line-height:16px; margin:0;">Apabila anda memiliki pertanyaan lebih lanjut mengenai akun Anda atau hal lainnya, silahkan menghubungi kami di <strong><a href="mailto:{{config path='clientfeatures/email_addresses/customer_support_email'}}" style="color:#1E7EC8;">{{config path='clientfeatures/email_addresses/customer_support_email'}}</a></strong> atau melalui telepon di <strong>{{config path='general/store_information/phone'}}</strong>.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#EAEAEA" align="center" style="background:#EAEAEA; text-align:center;"><center><p style="font-size:12px; margin:0;">Terima kasih, <strong>Vancelebes.com</strong></p></center></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>

@@ -118,7 +118,7 @@
 .main {
 
     input {
-      height: 40px;
+
     }
 
     .input-text {
@@ -126,15 +126,15 @@
     }
 
     select {
-      height: 40px;
+
     }
 
     textarea {
-      max-width: none;
+
     }
 
     label {
-      font-size: 15px;
+
     }
 
     p.required {
@@ -161,13 +161,6 @@
 /*----------------------------------------------------------------------------*/
 /* Global Styles
 /*----------------------------------------------------------------------------*/
-.page-title h1 {
-  border-bottom: 1px solid #000;
-}
-
-.form-list .field, .form-list .wide, .form-list .control {
-  margin-bottom: 20px;
-}
 
 /* remove default dotted border while focusing to a link */
 a:active,
@@ -178,22 +171,13 @@ a:focus,
     noFocusLine: expression(this.onFocus=this.blur());
 }
 
+.products-list .action .button,
+.products-grid .actions .button {
+  min-width: 150px;
+}
 
-.buttons-set {
-  display: inline-block;
-  width: 100%;
-  margin: 30px 0px 0px;
-  max-width: none;
-  border-top: 1px solid #000;
-
-  button.button {
-    float: left;
-    margin-left: 0px;
-    width: 100%;
-    padding: 15px 0px;
-    margin-top: 10px;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+.product-options dd select {
+    width: 90px;
+    max-width: 100%;
+    height: 35px;
 }

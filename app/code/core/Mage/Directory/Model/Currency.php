@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Directory
- * @copyright  Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -219,7 +219,7 @@ class Mage_Directory_Model_Currency extends Mage_Core_Model_Abstract
      */
     public function format($price, $options = array(), $includeContainer = true, $addBrackets = false)
     {
-        return $this->formatPrecision($price, 2, $options, $includeContainer, $addBrackets);
+        return $this->formatPrecision($price, 0, $options, $includeContainer, $addBrackets);
     }
 
     /**

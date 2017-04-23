@@ -1,7 +1,19 @@
 /*----------------------------------------------------------------------------*/
 /* General
 /*----------------------------------------------------------------------------*/
+.customer-account-create .scaffold-form label:first-child {
+	width: 100%;
+}
 
+ body.customer-account-create {
+ 	.form-list .control input.checkbox {
+ 		margin-top: 11px !important;
+ 	}
+
+ 	.form-list .control {
+ 		margin-top: 40px;
+ 	}
+ }
 /*----------------------------------------------------------------------------*/
 /* Login Page, and register, forgotpass
 /*----------------------------------------------------------------------------*/
@@ -10,6 +22,11 @@ body.customer-account-login, body.customer-account-create, body.customer-account
 
 	input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text] {
 		width: 100%;
+		height: 40px;
+	}
+
+	.name-middlename {
+		display: none;
 	}
 
 	.account-create, .account-login, .forgotpass-wrapper {
@@ -61,6 +78,8 @@ body.customer-account-login, body.customer-account-create, body.customer-account
 	.newsletter-control .control label {
 		font-weight: bold;
 	}
+
+
 }
 
 /*----------------------------------------------------------------------------*/

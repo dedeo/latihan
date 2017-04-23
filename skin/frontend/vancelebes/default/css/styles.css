@@ -12180,6 +12180,12 @@ button:hover, .button:hover {
 /*----------------------------------------------------------------------------*/
 /* General
 /*----------------------------------------------------------------------------*/
+/* line 7, ../scss/gope/_product-listing.scss */
+ul.products-grid .action .button,
+ol.products-list .action .button {
+  min-width: 150px;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Product Grid
 /*----------------------------------------------------------------------------*/
@@ -12225,22 +12231,6 @@ button:hover, .button:hover {
 /*----------------------------------------------------------------------------*/
 /* Forms, Input, Validation.
 /*----------------------------------------------------------------------------*/
-/* line 120, ../scss/gope/_global.scss */
-.main input {
-  height: 40px;
-}
-/* line 128, ../scss/gope/_global.scss */
-.main select {
-  height: 40px;
-}
-/* line 132, ../scss/gope/_global.scss */
-.main textarea {
-  max-width: none;
-}
-/* line 136, ../scss/gope/_global.scss */
-.main label {
-  font-size: 15px;
-}
 /* line 144, ../scss/gope/_global.scss */
 .main ::-webkit-input-placeholder {
   color: #737373;
@@ -12263,18 +12253,8 @@ button:hover, .button:hover {
 /*----------------------------------------------------------------------------*/
 /* Global Styles
 /*----------------------------------------------------------------------------*/
-/* line 164, ../scss/gope/_global.scss */
-.page-title h1 {
-  border-bottom: 1px solid #000;
-}
-
-/* line 168, ../scss/gope/_global.scss */
-.form-list .field, .form-list .wide, .form-list .control {
-  margin-bottom: 20px;
-}
-
 /* remove default dotted border while focusing to a link */
-/* line 173, ../scss/gope/_global.scss */
+/* line 166, ../scss/gope/_global.scss */
 a:active,
 a:focus,
 *:focus {
@@ -12283,24 +12263,17 @@ a:focus,
   noFocusLine: expression(this.onFocus=this.blur());
 }
 
-/* line 182, ../scss/gope/_global.scss */
-.buttons-set {
-  display: inline-block;
-  width: 100%;
-  margin: 30px 0px 0px;
-  max-width: none;
-  border-top: 1px solid #000;
+/* line 174, ../scss/gope/_global.scss */
+.products-list .action .button,
+.products-grid .actions .button {
+  min-width: 150px;
 }
-/* line 189, ../scss/gope/_global.scss */
-.buttons-set button.button {
-  float: left;
-  margin-left: 0px;
-  width: 100%;
-  padding: 15px 0px;
-  margin-top: 10px;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
+
+/* line 179, ../scss/gope/_global.scss */
+.product-options dd select {
+  width: 90px;
+  max-width: 100%;
+  height: 35px;
 }
 
 /* line 1, ../scss/gope/_homepage.scss */
@@ -12541,7 +12514,7 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
 /* line 22, ../scss/gope/_pdp.scss */
 .catalog-product-view .product-view .product-shop .product-name {
   display: inline-block;
-  width: 100%;
+  width: 50%;
   float: left;
 }
 /* line 27, ../scss/gope/_pdp.scss */
@@ -12582,11 +12555,49 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
   margin-bottom: 5px;
 }
 /* line 66, ../scss/gope/_pdp.scss */
-.catalog-product-view .product-options {
+.catalog-product-view .product-shop .product-options {
   border: 1px solid #000;
-  border-bottom: 0px;
+  width: 100%;
+  float: left;
 }
 /* line 71, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options label {
+  font-size: 15px;
+  font-weight: bold;
+}
+/* line 77, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options-bottom {
+  padding: 5px;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+/* line 83, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options-bottom .add-to-cart {
+  width: 100%;
+  float: left;
+  border-bottom: 0px;
+}
+/* line 88, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options-bottom .add-to-cart .qty-wrapper {
+  width: 100%;
+}
+/* line 92, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options-bottom .add-to-cart .qty-wrapper label {
+  font-size: 20px;
+}
+/* line 96, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options-bottom .add-to-cart .add-to-cart-buttons {
+  width: 100%;
+  margin: 0px;
+}
+/* line 102, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-shop .product-options-bottom .sharing-wrapper {
+  border: 0px;
+  width: 100%;
+  float: left;
+}
+/* line 109, ../scss/gope/_pdp.scss */
 .catalog-product-view .sharing-wrapper {
   display: inline-block;
   width: 100%;
@@ -12594,26 +12605,43 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
   padding: 10px;
   background: #f5f5f5;
 }
-/* line 78, ../scss/gope/_pdp.scss */
+/* line 116, ../scss/gope/_pdp.scss */
 .catalog-product-view .sharing-wrapper label {
   display: inline-block;
   width: 100%;
   font-size: 15px;
   margin-bottom: 10px;
 }
-/* line 92, ../scss/gope/_pdp.scss */
+/* line 125, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-view .add-to-links {
+  display: none;
+}
+/* line 130, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-view .add-to-cart-wrapper .add-to-cart {
+  display: block;
+  border-bottom: 0px;
+}
+/* line 134, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-view .add-to-cart-wrapper .add-to-links {
+  display: none;
+}
+/* line 140, ../scss/gope/_pdp.scss */
 .catalog-product-view .product-view .sharing-links li {
   padding-bottom: 0px;
 }
-/* line 96, ../scss/gope/_pdp.scss */
+/* line 144, ../scss/gope/_pdp.scss */
 .catalog-product-view .product-view .sharing-links li:first-child {
   padding-left: 0px;
 }
-/* line 102, ../scss/gope/_pdp.scss */
+/* line 150, ../scss/gope/_pdp.scss */
 .catalog-product-view .product-options-bottom {
   background: transparent;
   border: 0px;
   padding: 0px;
+}
+/* line 155, ../scss/gope/_pdp.scss */
+.catalog-product-view .product-options-bottom .add-to-links, .catalog-product-view .product-options-bottom .price-box {
+  display: none;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -12639,6 +12667,59 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
 /*----------------------------------------------------------------------------*/
 /* General
 /*----------------------------------------------------------------------------*/
+/* line 4, ../scss/gope/_cart.scss */
+.cart .page-title {
+  margin-bottom: 40px;
+  border-bottom: 0px;
+  text-align: center;
+}
+/* line 9, ../scss/gope/_cart.scss */
+.cart .page-title h1 {
+  display: inline-block;
+  width: auto;
+  padding: 3px 15px;
+  border-bottom: 1px solid #000;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+}
+
+/* line 20, ../scss/gope/_cart.scss */
+.cart-forms, .checkout-types.top {
+  display: none;
+}
+
+/* line 24, ../scss/gope/_cart.scss */
+.checkout-types .method-checkout-cart-methods-multishipping {
+  display: none;
+}
+
+/* line 29, ../scss/gope/_cart.scss */
+#shopping-cart-table .button2 span, #shopping-cart-table .button2 span span {
+  color: #dc012f;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+/* line 35, ../scss/gope/_cart.scss */
+#shopping-cart-table .button2:hover {
+  background: transparent;
+  font-style: italic;
+}
+/* line 40, ../scss/gope/_cart.scss */
+#shopping-cart-table .button2.btn-update {
+  display: none;
+}
+/* line 44, ../scss/gope/_cart.scss */
+#shopping-cart-table .or {
+  display: none;
+}
+/* line 48, ../scss/gope/_cart.scss */
+#shopping-cart-table .button, #shopping-cart-table .cart-table .product-cart-actions .button {
+  vertical-align: top;
+  padding: 6px 15px;
+  background: #dc012f;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Empty Cart
 /*----------------------------------------------------------------------------*/
@@ -12656,12 +12737,25 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
 /*----------------------------------------------------------------------------*/
 /* General
 /*----------------------------------------------------------------------------*/
+/* line 5, ../scss/gope/_checkout.scss */
+body.checkout-onepage-index input[type=email], body.checkout-onepage-index input[type=search], body.checkout-onepage-index input[type=number], body.checkout-onepage-index input[type=password], body.checkout-onepage-index input[type=tel], body.checkout-onepage-index input[type=text] {
+  height: 40px;
+  width: 100%;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Progress Bar
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 /* One Page Checkout (OPC) - Step 1 - Login
 /*----------------------------------------------------------------------------*/
+/* line 18, ../scss/gope/_checkout.scss */
+.opc select {
+  height: 40px;
+  width: 100%;
+  max-width: none;
+}
+
 /*----------------------------------------------------------------------------*/
 /* OPC - Step 2 - Billing Address Form
 /*----------------------------------------------------------------------------*/
@@ -12702,49 +12796,68 @@ body.catalog-category-view .add-to-links, body.catalogsearch-result-index .add-t
 /*----------------------------------------------------------------------------*/
 /* General
 /*----------------------------------------------------------------------------*/
+/* line 4, ../scss/gope/_customer.scss */
+.customer-account-create .scaffold-form label:first-child {
+  width: 100%;
+}
+
+/* line 9, ../scss/gope/_customer.scss */
+body.customer-account-create .form-list .control input.checkbox {
+  margin-top: 11px !important;
+}
+/* line 13, ../scss/gope/_customer.scss */
+body.customer-account-create .form-list .control {
+  margin-top: 40px;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Login Page, and register, forgotpass
 /*----------------------------------------------------------------------------*/
-/* line 11, ../scss/gope/_customer.scss */
+/* line 23, ../scss/gope/_customer.scss */
 body.customer-account-login input[type=email], body.customer-account-login input[type=search], body.customer-account-login input[type=number], body.customer-account-login input[type=password], body.customer-account-login input[type=tel], body.customer-account-login input[type=text], body.customer-account-create input[type=email], body.customer-account-create input[type=search], body.customer-account-create input[type=number], body.customer-account-create input[type=password], body.customer-account-create input[type=tel], body.customer-account-create input[type=text], body.customer-account-forgotpassword input[type=email], body.customer-account-forgotpassword input[type=search], body.customer-account-forgotpassword input[type=number], body.customer-account-forgotpassword input[type=password], body.customer-account-forgotpassword input[type=tel], body.customer-account-forgotpassword input[type=text] {
   width: 100%;
+  height: 40px;
 }
-/* line 15, ../scss/gope/_customer.scss */
+/* line 28, ../scss/gope/_customer.scss */
+body.customer-account-login .name-middlename, body.customer-account-create .name-middlename, body.customer-account-forgotpassword .name-middlename {
+  display: none;
+}
+/* line 32, ../scss/gope/_customer.scss */
 body.customer-account-login .account-create, body.customer-account-login .account-login, body.customer-account-login .forgotpass-wrapper, body.customer-account-create .account-create, body.customer-account-create .account-login, body.customer-account-create .forgotpass-wrapper, body.customer-account-forgotpassword .account-create, body.customer-account-forgotpassword .account-login, body.customer-account-forgotpassword .forgotpass-wrapper {
   width: 600px;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 20, ../scss/gope/_customer.scss */
+/* line 37, ../scss/gope/_customer.scss */
 body.customer-account-login .account-create .fieldset, body.customer-account-login .account-login .fieldset, body.customer-account-login .forgotpass-wrapper .fieldset, body.customer-account-create .account-create .fieldset, body.customer-account-create .account-login .fieldset, body.customer-account-create .forgotpass-wrapper .fieldset, body.customer-account-forgotpassword .account-create .fieldset, body.customer-account-forgotpassword .account-login .fieldset, body.customer-account-forgotpassword .forgotpass-wrapper .fieldset {
   margin: 0px;
   max-width: none;
 }
-/* line 25, ../scss/gope/_customer.scss */
+/* line 42, ../scss/gope/_customer.scss */
 body.customer-account-login .account-create .page-title h1, body.customer-account-login .account-login .page-title h1, body.customer-account-login .forgotpass-wrapper .page-title h1, body.customer-account-create .account-create .page-title h1, body.customer-account-create .account-login .page-title h1, body.customer-account-create .forgotpass-wrapper .page-title h1, body.customer-account-forgotpassword .account-create .page-title h1, body.customer-account-forgotpassword .account-login .page-title h1, body.customer-account-forgotpassword .forgotpass-wrapper .page-title h1 {
   text-align: center;
 }
-/* line 30, ../scss/gope/_customer.scss */
+/* line 47, ../scss/gope/_customer.scss */
 body.customer-account-login .form-list .control input.checkbox, body.customer-account-create .form-list .control input.checkbox, body.customer-account-forgotpassword .form-list .control input.checkbox {
   margin-top: 0px;
 }
-/* line 34, ../scss/gope/_customer.scss */
+/* line 51, ../scss/gope/_customer.scss */
 body.customer-account-login form .legend, body.customer-account-create form .legend, body.customer-account-forgotpassword form .legend {
   margin: 20px 0px;
   font-weight: bold;
 }
-/* line 39, ../scss/gope/_customer.scss */
+/* line 56, ../scss/gope/_customer.scss */
 body.customer-account-login .fieldset.login-info, body.customer-account-create .fieldset.login-info, body.customer-account-forgotpassword .fieldset.login-info {
   margin-top: 40px;
 }
-/* line 43, ../scss/gope/_customer.scss */
+/* line 60, ../scss/gope/_customer.scss */
 body.customer-account-login .buttons-set, body.customer-account-create .buttons-set, body.customer-account-forgotpassword .buttons-set {
   display: inline-block;
   width: 100%;
   margin: 30px 0px 0px;
   max-width: none;
 }
-/* line 49, ../scss/gope/_customer.scss */
+/* line 66, ../scss/gope/_customer.scss */
 body.customer-account-login .buttons-set button.button, body.customer-account-create .buttons-set button.button, body.customer-account-forgotpassword .buttons-set button.button {
   float: left;
   margin-left: 0px;
@@ -12755,7 +12868,7 @@ body.customer-account-login .buttons-set button.button, body.customer-account-cr
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 61, ../scss/gope/_customer.scss */
+/* line 78, ../scss/gope/_customer.scss */
 body.customer-account-login .newsletter-control .control label, body.customer-account-create .newsletter-control .control label, body.customer-account-forgotpassword .newsletter-control .control label {
   font-weight: bold;
 }
@@ -12829,46 +12942,66 @@ a:hover {
 /* line 50, ../scss/_local.scss */
 .page-header-container {
   font-family: lato;
-  padding-top: 15px;
-  display: inline-block;
-  width: 100%;
 }
-/* line 56, ../scss/_local.scss */
+/* line 53, ../scss/_local.scss */
 .page-header-container .logo {
   min-width: auto;
-  width: 33.33%;
+  width: 100px;
   height: auto;
   min-height: auto;
-  max-width: none;
-  display: inline-block;
-  margin: 0 auto;
-  float: left;
-  padding: 0px;
-}
-/* line 67, ../scss/_local.scss */
-.page-header-container .logo img {
-  max-width: 90px;
+  display: block;
   margin: 0 auto;
   float: none;
 }
-
+/* line 63, ../scss/_local.scss */
+.page-header-container .top-sosmed {
+  max-width: 300px;
+  position: absolute;
+  bottom: 65px;
+  font-size: 15px;
+}
+/* line 69, ../scss/_local.scss */
+.page-header-container .top-sosmed span {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 2px;
+}
 /* line 75, ../scss/_local.scss */
+.page-header-container .top-sosmed span .fa {
+  margin-right: 8px;
+  font-size: 18px;
+}
+/* line 81, ../scss/_local.scss */
+.page-header-container .top-contact {
+  max-width: 300px;
+  position: absolute;
+  bottom: 65px;
+  font-size: 18px;
+  right: 0px;
+  height: auto;
+}
+/* line 89, ../scss/_local.scss */
+.page-header-container .top-contact span {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* line 96, ../scss/_local.scss */
 .page-header {
   display: block;
   width: 100%;
   max-width: 1200px;
 }
 
-/* line 81, ../scss/_local.scss */
+/* line 102, ../scss/_local.scss */
 #header-nav {
   width: 100%;
   display: inline-block;
   padding: 0px;
   border: 0px;
-  background: #f8f8f8;
-  margin-top: 15px;
+  background: #000;
 }
-/* line 89, ../scss/_local.scss */
+/* line 109, ../scss/_local.scss */
 #header-nav #nav {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -12876,92 +13009,74 @@ a:hover {
   max-width: 1140px;
   margin: 0 auto;
 }
-/* line 97, ../scss/_local.scss */
+/* line 117, ../scss/_local.scss */
 #header-nav .nav-primary {
   margin: 0px;
 }
-/* line 100, ../scss/_local.scss */
+/* line 120, ../scss/_local.scss */
 #header-nav .nav-primary a {
-  color: #000;
+  color: #fff;
   font-weight: bold;
 }
-/* line 105, ../scss/_local.scss */
+/* line 125, ../scss/_local.scss */
 #header-nav .nav-primary li.level1 a {
   color: #000;
 }
-/* line 109, ../scss/_local.scss */
+/* line 129, ../scss/_local.scss */
 #header-nav .nav-primary a.level0 {
   padding: 0px 15px;
 }
-/* line 113, ../scss/_local.scss */
+/* line 133, ../scss/_local.scss */
 #header-nav .nav-primary li.view-all {
   display: none;
 }
-/* line 117, ../scss/_local.scss */
+/* line 137, ../scss/_local.scss */
 #header-nav .nav-primary li.level0 ul {
   border-radius: 5px;
   border-color: #ccc;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.175);
   padding: 0px;
 }
-/* line 124, ../scss/_local.scss */
+/* line 144, ../scss/_local.scss */
 #header-nav .nav-primary li.level1 a {
   border-radius: 0px;
   padding: 3px 20px;
 }
-/* line 128, ../scss/_local.scss */
+/* line 148, ../scss/_local.scss */
 #header-nav .nav-primary li.level1 a:hover {
   background: #f4f4f4;
 }
-/* line 135, ../scss/_local.scss */
+/* line 155, ../scss/_local.scss */
 #header-nav.hasScrolled {
   position: fixed;
   top: 0px;
   left: 0;
   z-index: 99;
-  background: #f8f8f8;
+  background: #000;
   padding: 0px 30px;
-  border-bottom: 0px;
-  margin-top: 0px;
+  border-bottom: 3px solid #fff;
 }
 
-/* line 147, ../scss/_local.scss */
+/* line 166, ../scss/_local.scss */
 #header-search {
-  width: 33.33%;
+  width: 300px;
   display: inline-block;
-  position: static;
-  max-width: none;
+  position: absolute;
+  max-width: 300px;
   min-width: 300px;
   float: left;
+  top: auto;
+  bottom: 65px;
+  left: 0;
   height: auto;
-  border: 1px solid #000;
-  margin-top: 65px;
 }
-/* line 158, ../scss/_local.scss */
-#header-search #cat {
-  width: 30%;
-  height: 40px;
-  border-radius: 0px;
-  float: left;
-  background: transparent;
-  border: none;
-  float: left;
-}
-/* line 168, ../scss/_local.scss */
+/* line 178, ../scss/_local.scss */
 #header-search #search {
-  border: none;
-  width: 70%;
-  float: left;
-  border-left: 1px solid #000;
-  border-radius: 0px;
-  padding-left: 10px;
+  border: 1px solid #000;
 }
-/* line 177, ../scss/_local.scss */
-#header-search #search_mini_form {
-  max-width: 100%;
-}
-/* line 180, ../scss/_local.scss */
-#header-search #search_mini_form .search-button {
+
+/* line 183, ../scss/_local.scss */
+#search_mini_form .search-button {
   position: absolute;
   text-indent: initial;
   z-index: 1;
@@ -12970,50 +13085,44 @@ a:hover {
   top: -2px;
   right: 5px;
 }
-/* line 189, ../scss/_local.scss */
-#header-search #search_mini_form .search-button:before {
+/* line 192, ../scss/_local.scss */
+#search_mini_form .search-button:before {
   display: none;
 }
 
-/* line 198, ../scss/_local.scss */
+/* line 197, ../scss/_local.scss */
 .account-cart-wrapper {
-  padding: 0px;
-  position: static;
-  width: 33.33%;
-  float: left;
-  display: inline-block;
-  margin-top: 20px;
+  padding: 15px 0px;
 }
-/* line 206, ../scss/_local.scss */
+/* line 200, ../scss/_local.scss */
 .account-cart-wrapper .header-top {
   font-size: 15px;
 }
-/* line 210, ../scss/_local.scss */
+/* line 204, ../scss/_local.scss */
 .account-cart-wrapper .header-links {
   text-align: right;
 }
-/* line 214, ../scss/_local.scss */
+/* line 208, ../scss/_local.scss */
 .account-cart-wrapper .fa {
   margin-right: 5px;
   font-size: 18px;
 }
-/* line 219, ../scss/_local.scss */
+/* line 213, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart {
   position: relative;
-  float: right;
 }
-/* line 223, ../scss/_local.scss */
+/* line 216, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart #shopping-menu {
   font-size: 16px;
-  width: 250px;
+  width: 200px;
   border: 1px solid #000;
-  padding: 7px 10px;
-  margin-top: 25px;
+  padding: 5px 0px 5px 10px;
+  margin-top: 15px;
   position: relative;
   display: inline-block;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
-/* line 234, ../scss/_local.scss */
+/* line 227, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .block-cart {
   position: absolute;
   z-index: 3;
@@ -13023,45 +13132,45 @@ a:hover {
   width: 400px;
   right: 0px;
 }
-/* line 244, ../scss/_local.scss */
+/* line 237, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .shopping-arrow, .account-cart-wrapper .header-minicart .shopping-arrow-down {
   position: absolute;
-  right: 8px;
-  top: 7px;
+  right: 5px;
+  top: 5px;
 }
-/* line 250, ../scss/_local.scss */
+/* line 243, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .shopping-arrow-down {
   display: none;
   z-index: 1;
 }
-/* line 255, ../scss/_local.scss */
+/* line 248, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper {
   padding: 0px;
 }
-/* line 258, ../scss/_local.scss */
+/* line 251, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .mini-products-list {
   padding: 0px;
 }
-/* line 261, ../scss/_local.scss */
+/* line 254, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .mini-products-list li {
   padding: 20px 15px;
 }
-/* line 265, ../scss/_local.scss */
+/* line 258, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .mini-products-list .product-details .product-name a {
   color: #000;
   font-size: 13px;
 }
-/* line 271, ../scss/_local.scss */
+/* line 264, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .mini-products-list .info-wrapper th {
   text-transform: capitalize;
   font-size: 13px;
   color: #000;
 }
-/* line 277, ../scss/_local.scss */
+/* line 270, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .mini-products-list .info-wrapper .price {
   color: #dc012f;
 }
-/* line 283, ../scss/_local.scss */
+/* line 276, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .subtotal {
   background-color: #000;
   text-align: center;
@@ -13070,33 +13179,34 @@ a:hover {
   margin-bottom: 0px;
   font-size: 16px;
 }
-/* line 291, ../scss/_local.scss */
+/* line 284, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .subtotal .label {
   margin-right: 5px;
   text-transform: capitalize;
+  font-weight: bold;
 }
-/* line 296, ../scss/_local.scss */
+/* line 290, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .subtotal .price {
   color: #fff;
   margin-left: 5px;
   font-weight: bold;
 }
-/* line 303, ../scss/_local.scss */
+/* line 297, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .minicart-actions {
   padding: 0px;
 }
-/* line 306, ../scss/_local.scss */
+/* line 300, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .minicart-actions .checkout-types.minicart {
   width: 50%;
   display: inline-block;
   float: left;
 }
-/* line 311, ../scss/_local.scss */
+/* line 305, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .minicart-actions .checkout-types.minicart li {
   width: 100%;
   margin: 0px;
 }
-/* line 317, ../scss/_local.scss */
+/* line 311, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .minicart-actions .checkout-button {
   min-width: auto;
   width: 100%;
@@ -13104,7 +13214,7 @@ a:hover {
   border: 1px solid #dc012f;
   line-height: normal;
 }
-/* line 325, ../scss/_local.scss */
+/* line 319, ../scss/_local.scss */
 .account-cart-wrapper .header-minicart .minicart-wrapper .minicart-actions .cart-link {
   width: 50%;
   border: 1px solid #000;
@@ -13117,7 +13227,7 @@ a:hover {
   text-transform: capitalize;
 }
 
-/* line 341, ../scss/_local.scss */
+/* line 335, ../scss/_local.scss */
 body .main-container {
   padding: 30px;
   max-width: 1200px;
@@ -13125,7 +13235,7 @@ body .main-container {
   margin-bottom: 50px;
 }
 
-/* line 349, ../scss/_local.scss */
+/* line 343, ../scss/_local.scss */
 .footer-container {
   width: 100%;
   padding: 0px;
@@ -13133,13 +13243,13 @@ body .main-container {
   margin: 0px;
   max-width: none;
 }
-/* line 356, ../scss/_local.scss */
+/* line 350, ../scss/_local.scss */
 .footer-container .footer {
   padding-top: 0px;
   max-width: 1200px;
   margin: 0 auto;
 }
-/* line 361, ../scss/_local.scss */
+/* line 355, ../scss/_local.scss */
 .footer-container .footer address {
   font-size: 12px;
   color: #000;
@@ -13147,7 +13257,7 @@ body .main-container {
   border-top: 1px solid #000;
   margin-top: 0px;
 }
-/* line 370, ../scss/_local.scss */
+/* line 364, ../scss/_local.scss */
 .footer-container .footer-contents {
   display: inline-block;
   width: 100%;
@@ -13155,46 +13265,46 @@ body .main-container {
   padding: 30px;
   text-align: left;
 }
-/* line 377, ../scss/_local.scss */
+/* line 371, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content {
   width: 20%;
   float: left;
   display: inline-block;
   text-align: left;
 }
-/* line 383, ../scss/_local.scss */
+/* line 377, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content:first-child {
   width: 35%;
   margin-right: 5%;
   padding-right: 20px;
 }
-/* line 389, ../scss/_local.scss */
+/* line 383, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content li {
   width: 100%;
   display: inline-block;
   margin-bottom: 5px;
   color: #fff;
 }
-/* line 396, ../scss/_local.scss */
+/* line 390, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content li a {
   color: #fff;
 }
-/* line 400, ../scss/_local.scss */
+/* line 394, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content li.top {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 16px;
 }
-/* line 406, ../scss/_local.scss */
+/* line 400, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content.media-sosial span {
   font-size: 15px;
 }
-/* line 410, ../scss/_local.scss */
+/* line 404, ../scss/_local.scss */
 .footer-container .footer-contents .footer-content.media-sosial span .fa {
   margin-right: 5px;
   font-size: 18px;
 }
-/* line 417, ../scss/_local.scss */
+/* line 411, ../scss/_local.scss */
 .footer-container address {
   width: 100%;
   text-align: center;

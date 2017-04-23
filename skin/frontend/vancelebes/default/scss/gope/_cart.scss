@@ -1,7 +1,56 @@
 /*----------------------------------------------------------------------------*/
 /* General
 /*----------------------------------------------------------------------------*/
+.cart .page-title {
+	margin-bottom: 40px;
+	border-bottom: 0px;
+	text-align: center;
 
+	h1 {
+		display: inline-block;
+	    width: auto;
+	    padding: 3px 15px;
+	    border-bottom: 1px solid #000;
+	    margin: 0 auto;
+	    text-align: center;
+	    float: none;
+	}
+}
+
+.cart-forms, .checkout-types.top {
+	display: none;
+}
+
+.checkout-types .method-checkout-cart-methods-multishipping {
+	display: none;
+}
+
+#shopping-cart-table {
+	.button2 span, .button2 span span {
+		color: #dc012f;
+		text-transform: capitalize;
+		text-decoration: none;
+	}
+
+	.button2:hover {
+		background: transparent;
+		font-style: italic;
+	}
+
+	.button2.btn-update {
+		display: none;
+	}
+
+	.or {
+		display: none;
+	}
+
+	.button, .cart-table .product-cart-actions .button {
+		vertical-align: top;
+		padding: 6px 15px;
+		background: #dc012f;
+	}
+}
 /*----------------------------------------------------------------------------*/
 /* Empty Cart
 /*----------------------------------------------------------------------------*/

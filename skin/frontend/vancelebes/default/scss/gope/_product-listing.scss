@@ -4,7 +4,9 @@
 
 ul.products-grid,
 ol.products-list {
-	
+	.action .button {
+	  	min-width: 150px;
+	}
 }
 
 /*----------------------------------------------------------------------------*/
